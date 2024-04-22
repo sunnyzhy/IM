@@ -10,7 +10,7 @@
 # protoc --java_out=./ ./test.proto
 ```
 
-会在当前目录下生成子目录 ```com/example/demo/model/Test.java```
+会在当前目录下生成 ```com/example/demo/model/Test.java```
 
 ## 新建 springboot 工程
 
