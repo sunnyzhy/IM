@@ -2,6 +2,8 @@
 
 ## 编辑 protobuf 文件
 
+编辑 test.proto：
+
 ```proto
 syntax = "proto3";  // proto3 必须加此注解
 
