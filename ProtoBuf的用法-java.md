@@ -29,7 +29,7 @@
 </dependency>
 ```
 
-**注：protobuf-java 的版本与 protoc 的版本保持一致。**
+**注：protobuf-java 的版本与安装的 protoc 的版本保持一致。**
 
 示例代码：
 
