@@ -1,4 +1,4 @@
-# 安装 protocol buffers
+# 安装 protocol buffers（ProtoBuf）
 
 ## 下载地址
 
