@@ -1,4 +1,6 @@
-# Protocol Buffers
+# IM (Instant Messaging)
+
+## Protocol Buffers
 
 Protocol Buffers 的特性：
 
@@ -14,7 +16,7 @@ Protocol Buffers 的特性：
 
 Protobuf具有许多其他功能和优点，例如可扩展性、跨平台支持和代码生成。它被广泛应用于各种领域，包括分布式系统、网络通信、数据存储和交换等。
 
-## 示例 protobuf 文件
+### 示例 protobuf 文件
 
 编辑 test.proto：
 
@@ -34,3 +36,19 @@ message PeopleInfo {
   int32 age = 2;    // 年龄  
 }
 ```
+
+## 自定义报文协议
+
+|序号|名称|长度（字节）|
+|--|--|--|
+|1|报文起始符|2|
+|2|功能码（报文类型）|2|
+|4|报文的长度|2|
+|5|标识符1|2|
+|6|数据1|N|
+|7|标识符2||2|
+|8|数据2|N|
+|...|...|...|
+||报文终止符|2|
+||CRC-16校验码，生成多项式：x16+x15+x2+1|2|
+
