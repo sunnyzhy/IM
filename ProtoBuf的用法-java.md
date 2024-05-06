@@ -10,7 +10,9 @@
 # protoc --java_out=./ ./test.proto
 ```
 
-会在当前目录下生成 ```com/example/demo/model/Test.java```
+会在当前目录下生成 ```com/example/demo/model/Test.java```。
+
+注：如果 .proto 的文件名与内部类名一样的话，生成的java文件名就会自动附加 ```OuterClass```。
 
 ## 新建 springboot 工程
 
