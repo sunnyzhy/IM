@@ -23,7 +23,7 @@
    - 如果名称的大小写不一致
       - 比如 ```Test.proto``` 和 ```message test```，生成的 java 文件就是 ```Test.java```
       - 比如 ```test.proto``` 和 ```message Test```，生成的 java 文件名就会自动附加 ```OuterClass```，也就是 ```TestOuterClass.java```
-3. 当使用 ```option java_outer_classname = "xxx";``` 自定义类名的时候，如果类名、 ```.proto``` 的文件名 和 ```message``` 名称，这三者的名称一样且大小写也一样的话，就会报错：```Cannot generate Java output because the file's outer class name, "xxx", matches the name of one of the types declared inside it.  Please either rename the type or use the java_outer_classname option to specify a different outer class name for the .proto file.```
+3. 当使用 ```option java_outer_classname = "xxx";``` 自定义类名的时候，如果类名、 ```.proto``` 的文件名 和 ```message``` 名称，**这三者的名称一样且大小写也一样的话**，就会报错：```Cannot generate Java output because the file's outer class name, "xxx", matches the name of one of the types declared inside it.  Please either rename the type or use the java_outer_classname option to specify a different outer class name for the .proto file.```
    - 比如 ```Test.proto``` 、 ```message Test``` 和 ```option java_outer_classname = "Test";``` 生成的 java 文件时就会报上述错误
 4. 综上所述，```.java``` 文件名的生成流程：
    1. 取 ```.proto``` 的文件名，如果名称的首字母是小写，就把首字母转换成大写
