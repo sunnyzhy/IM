@@ -14,12 +14,12 @@
 
 注意：
 
-1. 生成的 ```.java``` 文件名是以 ```.proto``` 的文件名所命名的，且生成的 ```.java``` 文件名的首字母会自动转换为大写。
+1. **生成的 ```.java``` 文件名是以 ```.proto``` 的文件名所命名的，且生成的 ```.java``` 文件名的首字母会自动转换为大写。**
    - 比如 ```test.proto``` 和 ```Test.proto``` 所生成的 java 文件都是 ```Test.java```
 2. 如果 ```.proto``` 的文件名与 message 名称一样，则：
    - 如果名称的大小写一致
       - 比如 ```Test.proto``` 和 ```message Test```，生成的 java 文件名就会自动附加 ```OuterClass```，也就是 ```TestOuterClass.java```
-      - 比如 ```test.proto``` 和 ```message test```，生成的 java 文件就是 ```Test.java```，**因为生成的 ```.java``` 文件名的首字母会自动转换为大写**
+      - 比如 ```test.proto``` 和 ```message test```，生成的 java 文件就是 ```Test.java```
    - 如果名称的大小写不一致
       - 比如 ```Test.proto``` 和 ```message test```，生成的 java 文件就是 ```Test.java```
       - 比如 ```test.proto``` 和 ```message Test```，生成的 java 文件名就会自动附加 ```OuterClass```，也就是 ```TestOuterClass.java```
