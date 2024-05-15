@@ -6,6 +6,8 @@
 
 ## 安装
 
+### linux
+
 1. 下载并解压，假如下载到 ```/usr/local```
    ```bash
    # wget https://github.com/protocolbuffers/protobuf/releases/download/v26.1/protoc-26.1-linux-x86_64.zip -P /root
@@ -26,3 +28,15 @@
    # protoc --version
    libprotoc 26.1
    ```
+
+### windows
+
+1. 下载并解压，假如下载到 ```D:\protoc-26.1-win64.zip```，解压到 ```D:\protoc```
+2. 配置环境变量
+   1. 新建系统变量，```PROTOC_HOME: D:\protoc```
+   2. 编辑环境变量 Path，添加 ```%PROTOC_HOME%\bin```
+   3. 查看版本号：
+      ```bash
+      >protoc --version
+      libprotoc 26.1
+      ```
